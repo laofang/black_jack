@@ -1,0 +1,11 @@
+
+#stage {
+  width: 480px;
+  height: 320px;
+  position: relative;
+  border: 2px solid black
+}
+canvas { position: absolute; }
+
+#game{ z-index: 2 }
+#status { z-index: 1 }

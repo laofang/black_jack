@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/common.css">
+	<script src="../js/util.js"></script>
+	<script src="../js/poker.js"></script>
+</head>
+<body>
+	<div id = "stage">
+		<canvas id="status"></canvas>
+		<canvas id="game" ></canvas>
+	</div>
+</body>
+
+<script>
+	var statusCanvas = document.getElementById("status");
+	var statusCtx = statusCanvas.getContext("2d");
+	statusCtx.fillRect(20,20,20,20);
+
+	var gameCanvas = document.getElementById("game");
+	var gameCtx = gameCanvas.getContext("2d");
+	gameCtx.fillStyle = "rgb(123,123,123)"
+	gameCtx.fillRect(30,30,20,20);
+
+
+</script>
+</html>
