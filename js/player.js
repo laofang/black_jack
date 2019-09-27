@@ -19,4 +19,15 @@ function Player(name) {
 		}
 		return sum;
 	}
+	
+	Player.prototype.toStake = function(amount,dealer) {
+		if(amount > this.money) {
+			return false;
+		}
+		else{
+			this.money = this.money - amount;
+			dealer.addStakePool(amount);
+			return true;
+		}
+	}
 }
