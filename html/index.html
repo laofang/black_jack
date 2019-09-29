@@ -6,24 +6,30 @@
 	<link rel="stylesheet" href="../css/common.css">
 	<script src="../js/util.js"></script>
 	<script src="../js/poker.js"></script>
+	<script src="../js/view.js"></script>
+
 </head>
 <body>
 	<div id = "stage">
-		<canvas id="status"></canvas>
-		<canvas id="game" ></canvas>
+		<canvas id="status" width="600" height="400"></canvas>
+		<canvas id="game" width="600" height="400"></canvas>
 	</div>
 </body>
 
 <script>
-	var statusCanvas = document.getElementById("status");
-	var statusCtx = statusCanvas.getContext("2d");
-	statusCtx.fillRect(20,20,20,20);
 
+//	var statusCanvas = document.getElementById("status");
+//	var statusCtx = statusCanvas.getContext("2d");
+//	statusCtx.fillRect(20,20,20,20);
+
+//	var gameCanvas = document.getElementById("game");
+//	var gameCtx = gameCanvas.getContext("2d");
+//	gameCtx.fillStyle = "rgb(123,123,123)"
+//	gameCtx.fillRect(30,30,20,20);
+	var backGround = document.getElementById("status");
 	var gameCanvas = document.getElementById("game");
-	var gameCtx = gameCanvas.getContext("2d");
-	gameCtx.fillStyle = "rgb(123,123,123)"
-	gameCtx.fillRect(30,30,20,20);
-
-
+	var view = new View({});
+	view.drawBackGround(backGround);
+	view.drawGame(gameCanvas);
 </script>
 </html>
